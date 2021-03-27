@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+
+        <i onclick="like()" class="fa fa-thumbs-up" style=color:rgb(71, 75, 66)></i><span id="likecount">0</span>
+        <i onclick="dislike()" class="fa fa-thumbs-down" style=color:rgb(71, 75, 65)></i><span id="dislikecount">0</span>   
+
+        <script>
+
+            var l = 0;
+            var d = 0;
+
+            function like(){
+                
+                  l++;
+                   console.log("like,l");
+                   document.getElementById("likecount").innerHTML=l;
+            }
+
+            function dislike(){
+                  
+                  d++;
+                   console.log("dislike,d");
+                   document.getElementById("dislikecount").innerHTML=d;
+            }
+
+        </script>
+
+    </body>
+
+
+</html>
