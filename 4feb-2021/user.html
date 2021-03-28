@@ -1,0 +1,41 @@
+<html>
+<head>   
+</head>
+<body>
+   <form>
+     Enter username:<input type="text" id="username"><br><br>
+
+     Enter password:<input type="password" id="password"><br><br>
+
+     Enter mobilenumber:<input type="mno" id="mno"><br><br>
+
+     Enter emailid:<input type="text" id="emailid"><br><br>
+
+     <button onclick="register()">submit</button>
+
+   </form>
+
+   <script>
+       
+       function register(){
+         
+        event.preventDefault();
+
+            var username_value= document.getElementById("username").value;
+            var password_value= document.getElementById("password").value;
+            var mno_value= document.getElementById("mno").value;
+            var email_value= document.getElementById("emailid").value;
+
+           var user= {
+                 username: username_value,
+                 password: password_value,
+                 mno: mno_value,
+                 email: email_value,
+           }
+         console.log(user);
+ }
+
+   </script>
+
+</body>
+</html>
