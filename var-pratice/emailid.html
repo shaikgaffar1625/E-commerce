@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+       <form>
+        <input type="text" placeholder="enter emailid" id="EmailId">
+        <button onclick= "emailcheck()">submit</button>
+        </form>
+
+        <script>
+        function emailcheck(){
+            event.preventDefault();
+            var emailId= document.getElementById("emailId").value;
+            console.log(emailId);
+
+            emailId=emailId.trim().toLowercase();
+            console.log(emailId);
+
+            if(emailId.includes("@gmail.com")){
+                document.getElementById("emailid").value=emailId;
+
+            }
+            else{
+                emailId= emaild+"@gmail.com";
+                document.getElementById("emailid").value=emailId;
+            }
+        }
+       </script>
+    </body>
+</html>
