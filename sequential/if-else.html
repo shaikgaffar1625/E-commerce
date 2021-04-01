@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+         <input placeholder="enter email" type="text" id="emailId">
+         <button onclick="checkEmail()">submit</button>
+        </form>
+        <script>
+            function checkEmail(){
+                event.preventDefault();
+                var emailId= document.getElementById("emailId").value;
+                if (emailId== "ravi@gmail.com"){
+                    alert("email is valid");
+                }
+                else{
+                    alert("email is invalid");
+                }
+            }
+        </script>
+    </body>
+</html>
