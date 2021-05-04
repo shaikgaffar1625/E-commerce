@@ -1,0 +1,54 @@
+<html>
+
+ <head>
+
+        <script src="account.js"></script>
+
+ </head>
+
+  <body>
+
+     <form>
+
+            Enter Username:<input type="text" id="username"> <br><br>
+            Enter Password: <input type="password" id="password"><br><br>
+            Enter EmailId: <input type="text" id="emailId"><br><br>
+            Enter Mobile_Number: <input type="text" id="mobile_number"><br><br>
+             <button onclick="register()">Register </button> 
+             <button onclick="login()">Login </button> 
+     </form>
+     
+     <script>
+            
+
+                if(localStorage.getItem('account_holders') == null){
+                    localStorage.setItem('account_holders',JSON.stringify([]));
+                }
+
+                function login(){
+                    event.preventDefault();
+                    location.href="login.html";
+                }
+                 function register(){
+                     event.preventDefault();
+                     var customer={
+                    username:getValueById("username"),
+                     password:getValueById("password"),
+                     emailId:getValueById("emailId"),
+                     mobile_number:getValueById("mobile_number")
+                     }
+
+                    var allCustomers=JSON.parse(localStorage.getItem('account_holders'));
+                     allCustomers.push(customer);
+                     localStorage.setItem('account_holders',JSON.stringify(allCustomers));
+                    //  allCustomers.forEach(function(customer){
+                    //  })
+                 }
+
+                 
+     
+     </script>
+
+  </body>
+
+</html>
