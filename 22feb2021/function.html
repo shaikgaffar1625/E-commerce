@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            Eid: <input type="text" id="id"> <br><br>
+            Ename: <input type="text" id="name"> <br><br>
+            Eaddress: <input type="text" id="address"> <br><br>
+            <button onclick="addDetails()">Add</button>
+        </form>
+        <script>
+                function addDetails(){
+                    event.preventDefault();
+                    var Eid=document.getElementById("eid").value;
+                    var Ename=document.getElementById("ename").value;
+                    var Eaddress=document.getElementById("eaddress").value;
+                    var employee=new employee(eid,ename,eaddress);
+                    console.log(employee);
+                  
+                    function Employee(eid,ename,eaddress){
+                        this.eid=eid;
+                        this.ename=ename;
+                        this.eaddress=eaddress;
+                    } 
+                }
+        </script>
+    </body>
+</html>

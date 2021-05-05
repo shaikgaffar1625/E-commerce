@@ -1,0 +1,10 @@
+<script>
+    (function(){
+        var http=new XMLHttpRequest();
+        http.open("get","config.json");
+        http.send();
+        http.onreadystatechange=function(){
+            console.log(http.responseText);
+        }
+    })();
+</script>
