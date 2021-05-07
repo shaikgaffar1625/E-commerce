@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+        <h1 id="data"></h1>
+
+         <script>
+                
+                 var linksData=[
+                     {
+                         text: "Youtube",
+                         url: "http://www.youtube.com"
+                     },
+                     {
+                         text: "LinkedIn",
+                         url: "http://www.linkedin.com"
+                     },
+                     {
+                         text: "facebook",
+                         url: "http://www.facebook.com"
+                     }
+                 ];
+
+                 var allLinks="";
+                    linksData.forEach(function(linkInfo){
+             allLinks=allLinks+linkInfo.text.link(linkInfo.url) + "&nbsp&nbsp"
+                    })
+                    console.log(allLinks);
+
+                    document.getElementById("data").innerHTML=allLinks;
+
+         </script>
+
+     </body>
+</html>
