@@ -1,0 +1,67 @@
+<html>
+    <head>
+
+         <style>
+         span{
+             color:Red
+         }
+
+         </style>
+
+    </head>
+
+     <body>
+
+            <form action="abc.html" onsubmit="return validate()">
+
+                Enter username: <input type="text" id="username"> <span id="username_msg"></span>
+
+                Enter Password: <input type="password" id="password"> <span id="password_msg"></span>
+
+                <button>Check</button>
+               
+
+            </form>
+
+            <script>
+            
+                function validate(){
+
+                   var username= document.getElementById("username").value;
+                   var password= document.getElementById("password").value;
+                    var isUserNameFullFilled=true;
+                    var isPasswordFullFilled=true;
+                   if(username.length == 0){
+                       isUserNameFullFilled=false;
+                   }
+                   if(password.length == 0){
+                    isPasswordFullFilled=false;
+                   }
+                   if(!isUserNameFullFilled){
+                        document.getElementById('username_msg').innerHTML="username required";
+                   }
+                   if(!isPasswordFullFilled){
+                        document.getElementById('password_msg').innerHTML="password required";
+                   }
+
+                   if(isPasswordFullFilled == false || isUserNameFullFilled == false){
+                       return false;
+                   }
+                   else
+                   {
+                       return true;
+                   }
+                }
+
+                 function admin(){
+                      
+                      alert("admin");
+
+                 }
+                 function user(){
+                    alert("user");
+                 }    
+            </script>
+
+     </body>
+</html>
