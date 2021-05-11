@@ -1,0 +1,43 @@
+<html>
+ <head>
+        <style>
+                body * {
+                  margin: 10px;
+                  border: 1px solid blue;
+                }
+              </style>
+
+ </head>
+  <body>
+        <form onclick="form()">FORM
+                <div onclick="div()">DIV
+                  <p onclick="p()">P</p>
+                </div>
+
+                 <button id="btn">Check Result</button>
+              </form>
+              <script>
+ 
+                  var i=0;
+                 function form(){
+                       i++;
+                       alert("form invoked");
+                 }
+                 function div(){
+                        i++;
+                        alert("div invoked");
+                 }
+
+                 function p(){
+                      i++;
+                      alert("p invoked");
+                 }
+
+                 btn.onclick=function(){
+                     event.preventDefault();
+                    console.log(i);
+                 }
+              </script>
+
+  </body>
+  </html>

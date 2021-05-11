@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+    </head>
+
+     <body>
+               <h1 id="msg"></h1>
+              <button id="btn">Click Me!</button>
+
+              <button onclick="remove()">remove</button>
+
+            <script>
+
+              
+            //  document.getElementById("btn").onclick= function(){
+            //      // document.getElementById("msg").innerHTML="Good Afternoon!";
+
+            //      alert("I am afternoon");
+            //  }
+
+            //  document.getElementById("btn").onclick= function(){
+            //       //document.getElementById("msg").innerHTML="Good Evening!";
+            //       alert("I am evening");
+            //  }
+            function event1(){
+                alert("I am event 1");
+            }
+            function event2(){
+                alert("I am event 2");
+            }
+            function event3(){
+                alert("I am event 3");
+            }
+             
+            document.getElementById("btn").addEventListener('click',event1);
+            document.getElementById("btn").addEventListener('click',event2);
+            document.getElementById("btn").addEventListener('click',event3);
+              
+               function remove(){
+
+                document.getElementById("btn").removeEventListener('click',event1);
+                document.getElementById("btn").removeEventListener('click',event2);
+                document.getElementById("btn").removeEventListener('click',event3);
+               }
+            </script>
+     </body>
+</html>
