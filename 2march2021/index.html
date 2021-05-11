@@ -1,0 +1,40 @@
+<html>
+    <body>
+       <table id="table" border="1" width="100%"></table>
+    <script>
+       var arr= [
+           {
+               CommentId : 101,
+               commentedBy : "raj",
+               coomment : "The supper bike"
+           },
+           {
+            CommentId : 102,
+               commentedBy : "sai",
+               coomment : "The cool bike"
+           },
+           {
+            CommentId : 103,
+               commentedBy : "tej",
+               coomment : "sports bike"
+           },
+       ]
+
+       var keys=Object.keys(arr[0]);
+       var table=document.getElementById("table");
+       var thead="";
+       keys.forEach(function(key){
+           thead=thead+ "<th>" + key + "</th>";
+       })
+       thead="<tr>" + thead + "</tr>";
+       //table.innerHTML=thead;
+
+       tbody="";
+       arr.forEach(function(c){
+              var tr="<tr>";
+        tbody=tbody + tr + "<td>" +c.CommentId+ "</td>" + "<td>" +c.commentedBy + "</td>" + "<td>" +c.coomment+ "</td>"  +"</tr>";       
+       })
+       table.innerHTML=thead+tbody;
+    </script>
+    </body>
+</html>
