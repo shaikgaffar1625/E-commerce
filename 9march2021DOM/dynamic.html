@@ -1,0 +1,33 @@
+<html>
+    <head>
+    </head>
+    <body id="body">
+          <script>
+          
+                      var body=document.getElementById('body');
+
+                      var form=document.createElement('form');
+
+                      console.log(form);
+
+                      var i1= document.createElement('input');
+
+                      i1.type="text";
+                      i1.placeholder="enter username";
+                      i1.id="username";
+                      i1.onkeyup=function(){
+                          console.log("onkeyup called");
+                      }
+
+                      console.log(i1);
+
+                    form.appendChild(i1);
+                    body.appendChild(form);
+
+          
+          </script>
+        
+
+    </body>
+     
+</html>

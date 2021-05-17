@@ -1,0 +1,35 @@
+<html>
+    <head>
+    <style>    
+           .xyz{
+               color:red
+           }
+        </style>
+    </head>
+    <body>
+          <form>
+          Username:  <input type="text" id="username">
+          fullname: <input type="text" name="fullname">
+          emailId: <input type="email" class="xyz">
+           <h1>This is h1</h1>
+            <button onclick="handler()">Submit</button>
+          </form>
+          <script>
+            function handler(){
+                event.preventDefault();
+               var usernameHTMLElement= document.getElementById("username");
+                console.log(usernameHTMLElement.value);
+               var fullname = document.getElementsByName('fullname');
+               console.log(fullname[0].value);
+               var email= document.getElementsByClassName('xyz');
+               console.log(email[0].value);
+
+                  var h1s=document.getElementsByTagName('h1');
+                  h1s[0].innerHTML="I have changed!!";
+
+            }
+          </script>
+
+    </body>
+     
+</html>
